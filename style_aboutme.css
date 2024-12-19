@@ -1,0 +1,733 @@
+/* This is desktop view */
+
+html {
+    width: 100%;
+    font-family: "Roboto", serif;
+}
+
+body {
+    background: linear-gradient(160deg, rgb(255, 255, 255), rgb(82, 114, 135));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h1 {
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.header_container {
+    min-height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 999;
+    transition: transform 0.3s ease-in-out;
+    object-position: center;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.profile_photo_mobile {
+    display: none;
+}
+
+.logo {
+    padding-top: 13px;
+}
+
+header {
+    width: 1024px;
+    min-height: 100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbutton {
+    border: 2px solid black;
+    margin-left: 10px;
+    padding: 10px;
+    white-space: nowrap;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
+}
+
+.navbutton:hover {
+    background-color: rgba(240, 248, 255, 0.877);
+    transition-duration: 0.5s;
+}
+
+.container {
+    min-height: 300px;
+    width: 1024px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding-top: 130px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.intro_part {
+    width: 1024px;
+    display: flex;
+    flex-direction: row;
+    min-height: 200px;
+    margin-bottom: 50px;
+    justify-content: space-between;
+}
+
+.intro_part::before, .intro_part::after {
+    content: '';
+    position: relative;
+    top: 50%;
+    width: 2.8px;
+    height: 55%;
+    background-color: black;
+    transform: translateY(-50%);
+}
+
+.name_identity {
+    flex: 1.3;
+    display: block;
+    text-align: center;
+    margin: auto;
+}
+
+.name_identity h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-style: italic;
+    margin-bottom: 7px;
+}
+
+.name_identity p {
+    color: #686868;
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.profile_photo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile_photo img {
+    width: 70%;
+    border-radius: 50%;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4);
+}
+
+.selfintro {
+    flex: 1.3;
+    display: block;
+    text-align: center;
+    margin: auto;
+    margin-right: 23px;
+}
+
+.selfintro h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-style: italic;
+    margin-bottom: 7px;
+}
+
+.selfintro p {
+    color: #686868;
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.2;
+}
+
+.content {
+    width: 1024px;
+    min-height: 600px;
+    margin-bottom: 190px;
+    display: flex;
+}
+
+.school_webinstruct_social {
+    flex: 1.4;
+    display: block;
+    padding-right: 10px;
+}
+
+.school_webinstruct_social a {
+    text-decoration: none;
+    color: black;
+}
+
+.school_webinstruct_social h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    font-style: italic;
+    margin-bottom: 9px;
+    transition: all 0.8s ease;
+    width: max-content;
+}
+
+.school_webinstruct_social a h1:hover {
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+    transition: text-shadow 0.3s ease;
+}
+
+.school_webinstruct_social p {
+    color: #686868;
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-style: normal;
+    padding-bottom: 5px;
+}
+
+.website_instructions {
+    margin-bottom: 30px;
+}
+
+.website_instructions span {
+    color: #686868;
+    font-size: 1.2rem;
+    font-weight: 900;
+    font-style: normal;
+    padding-bottom: 5px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.nycu {
+    margin-bottom: 30px;
+}
+
+.social_media_icons {
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 15px;
+    color: white;
+}
+
+.social_media_icons a {
+    display: flex;
+    justify-content: space-between;
+    width: 48%;
+    color: white;
+    transition: all 0.7s ease;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+}
+
+.social_media_icons a:hover {
+    background-color: rgba(0, 0, 0, 0.14);
+    filter: brightness(1.5);
+    transform: scale(1.05);
+    transition: all 0.7s ease;
+}
+
+.smi_personal, .smi_photography, .smi_podcast, .smi_designs {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 3%;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 46px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.smi_personal, .smi_photography, .smi_podcast, .smi_designs h2 {
+    padding-bottom: 40px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.smi_personal::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(images/smi_personal.PNG);
+    background-size: cover;
+    background-position: top;
+    filter: blur(2.5px) brightness(0.4);
+    z-index: -1;
+}
+
+.smi_photography::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(images/smi_photography.PNG);
+    background-size: cover;
+    background-position: top;
+    filter: blur(2.5px) brightness(0.4);
+    z-index: -1;
+}
+
+.smi_designs::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(images/smi_designs.png);
+    background-size: cover;
+    background-position: top;
+    filter: blur(2.5px) brightness(0.4);
+    z-index: -1;
+}
+
+.smi_podcast::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(images/smi_podcast.PNG);
+    background-size: cover;
+    background-position: top;
+    filter: blur(2.5px) brightness(0.4);
+    z-index: -1;
+}
+
+
+.social_media_icons span {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    font-size: 2.5rem;
+}
+
+
+.works_overview {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    justify-content: space-between;
+    border-radius: 7px;
+}
+
+.works_overview a {
+    width: 100%;
+    height: 100%;
+    padding-top: 95px;
+    font-size: 2rem;
+    font-weight: 700;
+    font-style: italic;
+    margin: auto;
+    border-radius: 7px;
+}
+
+.works_overview_title {
+    display: none;
+}
+
+.photography {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1));
+    height: 30%;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.7s ease;
+    border-radius: 7px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.photography::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/home-workoverview-photography.jpg') no-repeat center/cover;
+    background-position-y: -420px;
+    z-index: 1;
+    opacity: 0.5;
+    border-radius: 7px;
+}
+
+.photography a {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-decoration: none;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+    transition: all 0.7s ease;
+    border-radius: 7px;
+}
+
+.photography:hover {
+    background-color: white;
+    transform: scale(1.02);
+    transition: all 0.7s ease;
+}
+
+.photography a:hover {
+    font-size: 2.4rem;
+    transition: all 0.5s ease;
+}
+
+.designs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1));
+    height: 30%;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.7s ease;
+    border-radius: 7px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.designs::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/home-workoverview-designs.jpg') no-repeat center/cover;
+    background-position-y: -315px;
+    z-index: 1;
+    opacity: 0.5;
+    border-radius: 7px;
+}
+
+.designs a {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-decoration: none;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+    transition: all 0.7s ease;
+    border-radius: 7px;
+}
+
+.designs:hover {
+    background-color: white;
+    transform: scale(1.02);
+    transition: all 0.7s ease;
+}
+
+.designs a:hover {
+    font-size: 2.4rem;
+    transition: all 0.5s ease;
+}
+
+.podcast {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1));
+    height: 30%;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.7s ease;
+    border-radius: 7px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.podcast::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/home-workoverview-podcast.png') no-repeat center/cover;
+    background-position-y: -113px;
+    z-index: 1;
+    opacity: 0.5;
+    border-radius: 7px;
+}
+
+.podcast a {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-decoration: none;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+    transition: all 0.7s ease;
+    border-radius: 7px;
+}
+
+.podcast:hover {
+    background-color: white;
+    transform: scale(1.02);
+    transition: all 0.7s ease;
+}
+
+.podcast a:hover {
+    font-size: 2.4rem;
+    transition: all 0.5s ease;
+}
+
+.menudiv {
+    color: black;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.mobile-nav {
+    position: absolute;
+    top: 75px;
+    right: 20px;
+    display: none;
+    flex-direction: column;
+}
+
+.mobbutton {
+    display: none;
+}
+
+/* This is Mobile View */
+@media screen and (max-width: 400px) {
+    .mob-wrapper {
+        width: 40px;
+        padding-top: 13px;
+        text-align: center;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .mobbutton {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        text-decoration: none;
+        background-color: rgba(6, 46, 76, 0.18);
+        font-size: 1rem;
+        font-weight: 700;
+        color: black;
+        padding: 10px 15px;
+        border-radius: 5px;
+        text-align: center;
+        box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
+    }
+
+    .intro_part::before, .intro_part::after {
+        display: none;
+    }
+
+    .content {
+        display: block;
+        align-self: center;
+        max-width: 1024px;
+    }
+
+    .school_webinstruct_social {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: space-between;
+        padding-right: 0px;
+    }
+
+    .website_instructions, .nycu {
+        width: 49%;
+        justify-items: center;
+    }
+
+    .socialmedia {
+        width: 100%;
+        justify-items: center;
+        height: 750px;
+        margin-top: 30px;
+    }
+
+    .socialmedia h1 {
+        font-size: 2.5rem;
+        margin-bottom: 28px;
+    }
+
+    .social_media_icons {
+        width: 90%;
+        height: 300px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+
+    .smi_personal h2, .smi_photography h2, .smi_designs h2, .smi_podcast h2 {
+        font-size: 3rem;
+        padding: 8px 20px;
+    }
+
+    .smi_personal, .smi_photography, .smi_designs, .smi_podcast {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 85px;
+        padding-bottom: 85px;
+    }
+
+    .smi_personal span, .smi_photography span, .smi_designs span, .smi_podcast span {
+        font-size: 4rem;
+    }
+
+    .works_overview {
+        margin-top: 30px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .works_overview_title {
+        display: block;
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 700;
+        font-style: italic;
+        margin-bottom: 24px;
+    }
+
+    .photography, .designs, .podcast {
+        height: 300px;
+        margin-bottom: 30px;
+    }
+
+    .photography::before {
+        background-position-y: -730px;
+    }
+
+    .designs::before {
+        background-position-y: -520px;
+    }
+
+    .podcast::before {
+        background-position-y: -200px;
+    }
+
+    .photography a, .designs a, .podcast a {
+        padding-top: 130px;
+        padding-bottom: 130px;
+        font-size: 3rem;
+    }
+
+    .profile_photo {
+        display: none;
+    }
+
+    .profile_photo_mobile {
+        display: block;
+        text-align: center;
+    }
+
+    .profile_photo_mobile img {
+        width: 30%;
+        border-radius: 50%;
+        box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4);
+        margin-bottom: 30px;
+    }
+
+    .intro_part {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .name_identity h1 {
+        font-size: 4rem;
+        margin-bottom: 12px;
+    }
+
+    .name_identity p {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    .selfintro {
+        margin: auto;
+    }
+
+    .selfintro h1 {
+        display: none;
+    }
+
+    .selfintro p {
+        margin-top: 15px;
+        max-width: 700px;
+        font-size: 1.5rem;
+        line-height: 1.2;
+    }
+
+    .school_webinstruct_social {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .website_instructions h1 {
+        font-size: 2.5rem;
+    }
+
+    .website_instructions p {
+        font-size: 1.5rem;
+        margin-top: 10px;
+        padding-bottom: 0px;
+        line-height: 1.2;
+    }
+
+    .website_instructions span {
+        font-size: 1.5rem;
+    }
+
+    .nycu h1 {
+        font-size: 2.5rem;
+    }
+
+    .nycu p {
+        font-size: 1.5rem;
+        line-height: 1.2;
+        padding-bottom: 0px;
+    }
+
+    .smi_personal, .smi_photography, .smi_podcast, .smi_designs h2 {
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+    }
+
+
+
+}
